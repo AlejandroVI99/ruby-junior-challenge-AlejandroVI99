@@ -1,0 +1,34 @@
+<div class="toolbar">
+  <% if admin_signed_in? %>
+    <%= link_to t('sign_out'), sign_out_path, class:"toolbar-sign_up text-decoration-none"%>
+  <% elsif client_signed_in? %>
+    <%= link_to t('sign_out'), sign_out_path, class:"toolbar-sign_up text-decoration-none" %>
+  <% end %>     
+</div>
+<div id=table>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Repair price</th>
+        <th>Repair status</th>
+        <th>Store</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.repair_price %></td>
+        <td><%= product.repair_status %></td>
+        <td><%= product.store_id %></td>
+        <% if admin_signed_in? %>
+          <th><td><%= link_to 'Edit', edit_product_path(product), class:"btn btn-secondary" %></td></th>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
