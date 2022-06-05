@@ -3,6 +3,7 @@
     <%= link_to t('sign_out'), sign_out_path, class:"toolbar-sign_up text-decoration-none"%>
   <% elsif client_signed_in? %>
     <%= link_to t('sign_out'), sign_out_path, class:"toolbar-sign_up text-decoration-none" %>
+    <%= link_to 'Insert Product', new_product_path, class: "toolbar-sign_up text-decoration-none"%>
   <% end %>     
 </div>
 <div id=table>
