@@ -8,8 +8,9 @@ class StoresController < ApplicationController
   end
 
   def create
-    store = store.create(store_params)
+    store = Store.create(store_params)
     store.save
+    redirect_to stores_path
   end
 
   def edit
