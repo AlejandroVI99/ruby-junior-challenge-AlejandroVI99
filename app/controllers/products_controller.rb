@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
   def index
     if client_signed_in?
-      @products = Product.all
+      @products = Product.where(client_id: current_client.id)
     elsif admin_signed_in?
       @products = Product.all
     else
