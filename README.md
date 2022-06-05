@@ -43,3 +43,40 @@ Esto es un desafío técnico sin proposito comercial y D-Una de ninguna manera:
 * Compensarte de cualquier forma por realizar este desafío
 
 # Buena suerte 🚀
+
+# Instructions
+
+:eyes: This project was made in macOS :heavy_exclamation_mark:
+
+* Ruby version 3.1.0
+* postgresql
+
+After clone the repository, we need to set our project:
+
+* Run ```bundle install```
+* Install postgresql https://www.digitalocean.com/community/tutorials/how-to-set-up-ruby-on-rails-with-postgres
+* Install redis for sideq https://redis.io/docs/getting-started/installation/install-redis-on-mac-os/ and start service
+* Create the database, migrations and seeds
+
+```
+rails db:create
+rails db:migreate
+rails db:seed
+```
+
+* Start rails service ```rails s```
+
+After start the rails service, the main page looks like this
+
+![image](https://user-images.githubusercontent.com/57637591/172052969-70c63ec0-13bc-4aca-996e-0b5ed6c2ec88.png)
+
+We need to sign in first in one of them, first, we are going to log in with a client user.
+After sign in, it going to apper the same page like above, and know we can enter in the Products view or Insert a Product
+
+**Products page**
+
+![image](https://user-images.githubusercontent.com/57637591/172053184-28cd86b6-933a-4cbd-ae0f-c098225ca1a7.png)
+
+**Insert product page**
+
+![image](https://user-images.githubusercontent.com/57637591/172053220-b757ea3a-f271-4fc1-959c-aeb9e4c5db75.png)
